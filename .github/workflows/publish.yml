@@ -2,9 +2,9 @@ name: Publish Extension
 
 on:
   push:
-    tags:
-      - 'v*' # Trigger on tags like v1.0.0, v1.1.0, etc.
-
+    branhces:
+      - main
+      
 jobs:
   publish:
     runs-on: ubuntu-latest
