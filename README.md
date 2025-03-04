@@ -27,5 +27,3 @@ Openning JSON settings you can create some scripts as the following example show
 ### 0.1.0
 
 Initial release of scripted-browser, opening tabs using iframes.
-
-**Enjoy!**
