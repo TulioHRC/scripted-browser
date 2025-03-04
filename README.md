@@ -12,8 +12,9 @@ Openning JSON settings you can create some scripts as the following example show
   "scripted-browser.scripts": [
     {
       "name": "Run Script and Open URL",
-      "script": "echo 'Running script...'",
-      "url": "https://example.com"
+      "script": "echo 'Running script...'", // Optional
+      "isSidePanel": false, // Optional, default is false
+      "url": "https://example.com" // Optional
     }
   ],
   ...
