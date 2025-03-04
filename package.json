@@ -1,9 +1,10 @@
 {
   "name": "scripted-browser",
   "displayName": "scripted-browser",
+  "repository": "https://github.com/TulioHRC/scripted-browser",
   "publisher": "oilut",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.85.0"
   },

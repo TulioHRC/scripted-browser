@@ -1,7 +1,5 @@
 # Scripted Browser
 
-This is the README for your extension "test". After writing up a brief description, we recommend including the following sections.
-
 Little extension just to make your own scripts to run, and with an additional feature to open an URL webview (not all websites allow this, because of Content Security Policy that affects the iframe permissions).
 
 ## Extension Settings

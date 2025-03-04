@@ -1,0 +1,33 @@
+name: Publish Extension
+
+on:
+  push:
+    tags:
+      - 'v*' # Trigger on tags like v1.0.0, v1.1.0, etc.
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install vsce
+        run: npm install -g @vscode/vsce
+
+      - name: Package extension
+        run: vsce package
+
+      - name: Publish extension
+        run: vsce publish
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }} # Personal Access Token for publishing
