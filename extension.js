@@ -16,7 +16,7 @@ function activate(context) {
             return;
         }
 
-        const selectedScript = scripts.length === 1 ? scripts[0] : 
+        const selectedScript = scripts.length === 1 ? scripts[0].name : 
             await vscode.window.showQuickPick(scripts.map(script => script.name), {
                 placeHolder: 'Select a command to run'
             });
