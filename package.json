@@ -1,6 +1,7 @@
 {
   "name": "scripted-browser",
   "displayName": "scripted-browser",
+  "publisher": "oilut",
   "description": "",
   "version": "0.0.1",
   "engines": {
