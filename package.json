@@ -1,6 +1,6 @@
 {
-  "name": "test",
-  "displayName": "test",
+  "name": "scripted-browser",
+  "displayName": "scripted-browser",
   "description": "",
   "version": "0.0.1",
   "engines": {
@@ -11,10 +11,24 @@
   ],
   "main": "./extension.js",
   "contributes": {
+    "configuration": {
+      "title": "Custom Commands",
+      "properties": {
+        "scripted-browser.scripts": {
+          "type": "array",
+          "default": [],
+          "description": "Define custom commands to run scripts and open URLs."
+        }
+      }
+    },
     "commands": [
       {
-        "command": "test.helloWorld",
+        "command": "scripted-browser.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "scripted-browser.scripted-tab",
+        "title": "Scripted Tab"
       }
     ]
   },
@@ -24,11 +38,11 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.97.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "20.x",
-    "eslint": "^9.19.0",
+    "@types/vscode": "^1.97.0",
     "@vscode/test-cli": "^0.0.10",
-    "@vscode/test-electron": "^2.4.1"
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.19.0"
   }
 }
